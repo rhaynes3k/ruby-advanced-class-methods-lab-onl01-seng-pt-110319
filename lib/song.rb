@@ -54,5 +54,5 @@ class Song
     end
     @@all
   end
-  #binding.pry
+  binding.pry
 end
