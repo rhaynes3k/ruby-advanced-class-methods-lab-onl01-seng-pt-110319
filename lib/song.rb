@@ -45,6 +45,7 @@ class Song
   
   def self.new_from_filename(file)   
     arr = file.split(".mp3")
+    binding.pry
     arr.map do |s|
       sng = s.split(" - ")
       artist_name = sng[0]
