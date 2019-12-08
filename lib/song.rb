@@ -65,6 +65,8 @@ class Song
     song
   end
   
-  
+  def Song.destroy_all
+    @@all.delete
+  end
   #binding.pry
 end
