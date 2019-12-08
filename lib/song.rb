@@ -3,10 +3,6 @@ class Song
   attr_accessor :name, :artist_name, :song
   @@all = []
 
-  # def initialize(name)
-  #   @name = name
-  # end
-  
   def self.all
     @@all
   end
@@ -14,10 +10,6 @@ class Song
   def save
     self.class.all << self
   end
-  
-  # def self.song
-  #   Song.create
-  # end
   
   def Song.create
     @@all << Song.new
@@ -40,13 +32,24 @@ class Song
   
   def Song.find_or_create_by_name(name)
     if self.find_by_name(name)
-      #puts "Aleady here!"
-      
+      puts "Aleady here!"
+      self.find_by_name(name)
     else
        self.create_by_name(name)
- 
-    #   self.find_by_name(name)
     end
+  end
+  
+  def Song.alphabetical
+    self.all.sort_by{|s|s.name}
+  end
+  
+  def Song.new_from_filename(file)
+    @file = file
+    arr = []
+    art_n = []
+    arr.push(file.split(" - ")).flatten
+    self.create_by_name(arr[0][1].split(".mp3")).flatten#.artist_name = arr[0][0]
+    
   end
   #binding.pry
 end
