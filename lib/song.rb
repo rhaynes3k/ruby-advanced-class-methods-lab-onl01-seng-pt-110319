@@ -49,7 +49,7 @@ class Song
       sng = s.split(" - ")
       art = sng[0]
       title = sng[1]
-    song = Song.create_by_name(title)
+    Song.create_by_name(title)
     song.artist_name = art
     end
     self.all
