@@ -43,13 +43,16 @@ class Song
     self.all.sort_by{|s|s.name}
   end
   
-  def Song.new_from_filename(file)
-    @file = file
-    arr = []
-    art_n = []
-    arr.push(file.split(" - ")).flatten
-    self.create_by_name(arr[0][1].split(".mp3")).flatten#.artist_name = arr[0][0]
-    
+  def Song.new_from_filename(file)   
+    arr = file.split(".mp3")
+    arr.map do |s|
+      sng = s.split(" - ")
+      art = sng[0]
+      title = sng[1]
+    song = Song.create_by_name(title)
+    song.artist_name = art
+    end
+    @@all
   end
   #binding.pry
 end
