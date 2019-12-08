@@ -43,7 +43,7 @@ class Song
     self.all.sort_by{|s|s.name}
   end
   
-  def Song.new_from_filename(file)   
+  def self.new_from_filename(file)   
     arr = file.split(".mp3")
     arr.map do |s|
       sng = s.split(" - ")
