@@ -53,5 +53,5 @@ class Song
     end
     self.all
   end
-  binding.pry
+  #binding.pry
 end
