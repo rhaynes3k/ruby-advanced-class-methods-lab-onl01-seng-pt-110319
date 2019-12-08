@@ -45,15 +45,14 @@ class Song
   
   def self.new_from_filename(file)   
     arr = file.split(".mp3")
-    
-    arr.map do |s|
-      sng = s.split(" - ")
-      artist_name = sng[0]
-      name = sng[1]
-      binding.pry
-    song = Song.create_by_name(name).artist_name = artist_name
-    song
-    end
+    sng = arr[0].split(" - ")
+       artist_name = sng[0]
+       name = sng[1]
+    #   binding.pry
+     song = Song.create_by_name(name)
+     song.artist_name = artist_name
+    song.artist_name
+    # end
   
   end
   #binding.pry
