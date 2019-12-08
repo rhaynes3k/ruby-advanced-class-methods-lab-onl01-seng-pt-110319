@@ -47,8 +47,8 @@ class Song
     arr = file.split(".mp3")
     arr.map do |s|
       sng = s.split(" - ")
-      art = sng[0]
-      title = sng[1]
+      artist_name = sng[0]
+      name = sng[1]
     song = Song.create_by_name(title).artist_name = art
     end
     self.all
