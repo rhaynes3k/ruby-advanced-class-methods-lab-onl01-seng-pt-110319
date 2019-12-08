@@ -50,8 +50,9 @@ class Song
       artist_name = sng[0]
       name = sng[1]
     song = Song.create_by_name(name).artist_name = artist_name
-    end
     song
+    end
+  
   end
   #binding.pry
 end
