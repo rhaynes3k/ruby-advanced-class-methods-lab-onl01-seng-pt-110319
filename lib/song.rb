@@ -52,8 +52,7 @@ class Song
      song = Song.create_by_name(name)
      song.artist_name = artist_name
     song.artist_name
-    # end
   
   end
-  #binding.pry
+  binding.pry
 end
