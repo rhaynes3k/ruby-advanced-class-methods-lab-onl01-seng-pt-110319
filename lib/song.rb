@@ -52,7 +52,7 @@ class Song
     song = Song.create_by_name(title)
     song.artist_name = art
     end
-    @@all
+    self.all
   end
   binding.pry
 end
