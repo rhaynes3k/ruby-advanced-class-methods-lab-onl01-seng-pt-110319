@@ -51,7 +51,7 @@ class Song
     #   binding.pry
      song = Song.create_by_name(name)
      song.artist_name = artist_name
-  
+     song
   end
   binding.pry
 end
