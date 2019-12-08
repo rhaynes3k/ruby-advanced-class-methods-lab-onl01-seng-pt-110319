@@ -54,6 +54,15 @@ class Song
     song
   end
   
-  
+  def Song.create_from_filename(file)
+    arr = file.split(".mp3")
+    sng = arr[0].split(" - ")
+       artist_name = sng[0]
+       name = sng[1]
+    #   binding.pry
+     song = Song.create_by_name(name)
+     song.artist_name = artist_name
+    song
+  end
   #binding.pry
 end
